@@ -1,0 +1,1612 @@
+{
+  "meta": {
+    "name": "AI Glossary for the AI Term Explainer Agent",
+    "version": "1.0.0",
+    "source": "https://hai.stanford.edu/ai-definitions",
+    "source_publisher": "Stanford HAI - Artificial Intelligence Glossary",
+    "retrieved": "2026-10-23",
+    "term_count": 99,
+    "note": "Term list taken from the source page. Explanations, mental models and quizzes are original wording written for the agent, not copies of the source text.",
+    "schema": {
+      "id": "slug used as the primary key",
+      "term": "display name",
+      "aliases": "other names or abbreviations, useful for lookup",
+      "category": "topic bucket for browsing",
+      "simple": "1-line plain-language explanation",
+      "mental_model": "1-line real-world example",
+      "quiz": "one multiple-choice question: q, options[4], answer_index, explanation",
+      "related": "ids of related terms",
+      "review_status": "draft | approved | rejected (human-in-the-loop gate before the agent serves it)",
+      "source_truncated": "true when the source page text was cut off and wording is partly inferred"
+    }
+  },
+  "terms": [
+    {
+      "id": "adversarial-distillation-attack",
+      "term": "Adversarial Distillation Attack",
+      "aliases": [],
+      "category": "Safety & Security",
+      "simple": "An attack where someone quietly interferes with the process of training or distilling a model so the result is compromised.",
+      "mental_model": "A student studies from a tutor's notes while someone secretly swaps in a few wrong pages.",
+      "quiz": {
+        "q": "What is the attacker's aim in an adversarial distillation attack?",
+        "options": ["Make GPUs run faster", "Quietly interfere with the training process", "Shrink the dataset", "Translate the model's output"],
+        "answer_index": 1,
+        "explanation": "The attack targets the training/distillation process itself, so the resulting model is compromised."
+      },
+      "related": ["data-poisoning", "ai-safety"],
+      "review_status": "draft",
+      "source_truncated": true
+    },
+    {
+      "id": "agi",
+      "term": "AGI (Artificial General Intelligence)",
+      "aliases": ["AGI", "Artificial General Intelligence"],
+      "category": "Foundations",
+      "simple": "A hypothetical AI that can learn and reason across almost any task at human level or better.",
+      "mental_model": "One assistant that can file your taxes, debug code and plan a trip, without being rebuilt for each job.",
+      "quiz": {
+        "q": "What most distinguishes AGI from today's narrow AI?",
+        "options": ["It is faster", "It works across a wide range of tasks", "It is open source", "It uses less data"],
+        "answer_index": 1,
+        "explanation": "AGI means broad, general ability rather than skill in a single task."
+      },
+      "related": ["artificial-intelligence", "frontier-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "agentic-ai",
+      "term": "Agentic AI",
+      "aliases": ["AI agents"],
+      "category": "Applications",
+      "simple": "AI that pursues a goal by planning steps, using tools and adjusting based on feedback.",
+      "mental_model": "You say 'book me a flight under $400' and it searches, compares, and fills the booking form itself.",
+      "quiz": {
+        "q": "Which behavior makes a system 'agentic'?",
+        "options": ["Only answering one question at a time", "Planning and taking multi-step actions with tools", "Being trained on images", "Running on a GPU"],
+        "answer_index": 1,
+        "explanation": "Agentic systems plan, act through tools, and adapt to results."
+      },
+      "related": ["automation", "human-in-the-loop"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ai-alignment",
+      "term": "AI Alignment",
+      "aliases": ["Alignment"],
+      "category": "Safety & Security",
+      "simple": "Making sure an AI's goals and behavior match what people actually intend and value.",
+      "mental_model": "You ask a robot vacuum to 'clean the floor' and it doesn't throw out your keys to get the floor clearer.",
+      "quiz": {
+        "q": "AI alignment is mainly about:",
+        "options": ["Model size", "Matching AI behavior to human intent", "Chip speed", "Data storage"],
+        "answer_index": 1,
+        "explanation": "Alignment keeps AI behavior consistent with human values and instructions."
+      },
+      "related": ["ai-safety", "responsible-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ai-benchmarks",
+      "term": "AI Benchmarks",
+      "aliases": ["Benchmarks"],
+      "category": "Operations & Infrastructure",
+      "simple": "Standard tests used to compare how well different AI systems perform a task.",
+      "mental_model": "Like a common exam every student sits so you can compare scores fairly.",
+      "quiz": {
+        "q": "Why are benchmarks useful?",
+        "options": ["They train the model", "They allow fair comparison across models", "They store data", "They remove bias"],
+        "answer_index": 1,
+        "explanation": "A shared test lets you compare systems on equal terms."
+      },
+      "related": ["frontier-model", "scaling-laws"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ai-fluency",
+      "term": "AI Fluency",
+      "aliases": ["AI literacy"],
+      "category": "Ethics & Governance",
+      "simple": "The skill of working with AI effectively and responsibly, knowing what it can and cannot do.",
+      "mental_model": "Knowing when to trust a GPS and when to notice it's sending you into a lake.",
+      "quiz": {
+        "q": "Which is part of AI fluency?",
+        "options": ["Blindly trusting outputs", "Critically evaluating AI outputs", "Avoiding all AI tools", "Memorizing model weights"],
+        "answer_index": 1,
+        "explanation": "Fluency includes checking outputs and understanding limitations."
+      },
+      "related": ["prompt-engineering", "responsible-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ai-safety",
+      "term": "AI Safety",
+      "aliases": [],
+      "category": "Safety & Security",
+      "simple": "The field focused on making AI behave reliably and avoid causing harm, even in unexpected situations.",
+      "mental_model": "Crash testing and seatbelts, but for AI systems.",
+      "quiz": {
+        "q": "AI safety focuses on:",
+        "options": ["Reducing power use", "Preventing harmful or unreliable behavior", "Making UIs prettier", "Selling models"],
+        "answer_index": 1,
+        "explanation": "It aims to keep AI reliable and non-harmful at scale."
+      },
+      "related": ["ai-alignment", "responsible-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ai-tech-stack",
+      "term": "AI Tech Stack",
+      "aliases": ["AI stack"],
+      "category": "Operations & Infrastructure",
+      "simple": "The layers of hardware, software and compute that together support building and running AI.",
+      "mental_model": "Like a restaurant: farms, kitchen, chefs and waiters all stacked to deliver one meal.",
+      "quiz": {
+        "q": "An AI tech stack includes:",
+        "options": ["Only the model", "Hardware, software and compute layers", "Only datasets", "Only the UI"],
+        "answer_index": 1,
+        "explanation": "It is the full set of layers supporting the AI lifecycle."
+      },
+      "related": ["gpu", "hyperscaler", "mlops"],
+      "review_status": "draft",
+      "source_truncated": true
+    },
+    {
+      "id": "ai-workflow",
+      "term": "AI Workflow",
+      "aliases": ["ML pipeline"],
+      "category": "Operations & Infrastructure",
+      "simple": "The end-to-end sequence of building an AI system: data prep, training, testing and deployment.",
+      "mental_model": "An assembly line where each station hands a better product to the next.",
+      "quiz": {
+        "q": "Which is the correct order?",
+        "options": ["Deploy, train, collect data", "Collect data, train, test, deploy", "Test, collect data, deploy", "Train, deploy, collect data"],
+        "answer_index": 1,
+        "explanation": "Data comes first, then training and testing, then deployment."
+      },
+      "related": ["mlops", "training-data"],
+      "review_status": "draft"
+    },
+    {
+      "id": "algorithm",
+      "term": "Algorithm",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "A step-by-step set of instructions for solving a problem.",
+      "mental_model": "A cooking recipe: follow the steps and you get the dish.",
+      "quiz": {
+        "q": "An algorithm is best described as:",
+        "options": ["A dataset", "A step-by-step procedure", "A chip", "A chatbot"],
+        "answer_index": 1,
+        "explanation": "It is an ordered set of steps to reach a result."
+      },
+      "related": ["model", "optimization-algorithm"],
+      "review_status": "draft"
+    },
+    {
+      "id": "algorithmic-monoculture",
+      "term": "Algorithmic Monoculture",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "When many organizations use the same or very similar AI systems or data, so they all make the same mistakes.",
+      "mental_model": "Every bank using the same credit model, so one flaw rejects the same people everywhere.",
+      "quiz": {
+        "q": "What is the main risk of algorithmic monoculture?",
+        "options": ["Higher cost", "Shared errors affecting everyone at once", "Slower chips", "Smaller datasets"],
+        "answer_index": 1,
+        "explanation": "Uniform systems fail in uniform ways, so errors spread widely."
+      },
+      "related": ["bias", "foundation-models"],
+      "review_status": "draft"
+    },
+    {
+      "id": "artificial-hivemind",
+      "term": "Artificial Hivemind",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "A network of AI systems that share information and coordinate their actions like one collective.",
+      "mental_model": "A swarm of delivery drones that share traffic info so all of them reroute at once.",
+      "quiz": {
+        "q": "An artificial hivemind is:",
+        "options": ["One isolated model", "AI agents that share info and coordinate", "A type of GPU", "A dataset format"],
+        "answer_index": 1,
+        "explanation": "It describes AI systems acting together through shared information."
+      },
+      "related": ["agentic-ai"],
+      "review_status": "draft",
+      "source_truncated": true
+    },
+    {
+      "id": "artificial-intelligence",
+      "term": "Artificial Intelligence (AI)",
+      "aliases": ["AI"],
+      "category": "Foundations",
+      "simple": "The science of making machines do things that normally need human intelligence.",
+      "mental_model": "Your phone unlocking by recognizing your face.",
+      "quiz": {
+        "q": "Who coined the term 'artificial intelligence' in 1955?",
+        "options": ["Alan Turing", "John McCarthy", "Geoffrey Hinton", "Ada Lovelace"],
+        "answer_index": 1,
+        "explanation": "John McCarthy introduced the term in 1955."
+      },
+      "related": ["machine-learning", "agi"],
+      "review_status": "draft"
+    },
+    {
+      "id": "attention-mechanism",
+      "term": "Attention Mechanism",
+      "aliases": ["Attention"],
+      "category": "Models & Architectures",
+      "simple": "A way for a model to focus on the most relevant parts of its input when producing output.",
+      "mental_model": "Highlighting the key sentence in a paragraph before answering a question about it.",
+      "quiz": {
+        "q": "What does attention let a model do?",
+        "options": ["Ignore all input", "Focus on the most relevant parts", "Store more data", "Run without GPUs"],
+        "answer_index": 1,
+        "explanation": "It weights input parts by relevance."
+      },
+      "related": ["transformer", "context-window"],
+      "review_status": "draft"
+    },
+    {
+      "id": "automation",
+      "term": "Automation",
+      "aliases": [],
+      "category": "Applications",
+      "simple": "Technology doing a task exactly the way a human defined it.",
+      "mental_model": "An email rule that moves every invoice into a folder.",
+      "quiz": {
+        "q": "In automation, who defines what to do?",
+        "options": ["The machine", "The human", "The GPU", "The dataset"],
+        "answer_index": 1,
+        "explanation": "Automation follows predefined human instructions, unlike agentic AI that plans for itself."
+      },
+      "related": ["agentic-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "backpropagation",
+      "term": "Backpropagation",
+      "aliases": ["Backprop"],
+      "category": "Learning Methods",
+      "simple": "How a neural network learns from errors by tracing blame backward through its layers.",
+      "mental_model": "A team reviews a failed project from the end and finds which step caused the miss.",
+      "quiz": {
+        "q": "Backpropagation works by:",
+        "options": ["Adding more data", "Sending error backward to adjust weights", "Deleting layers", "Compressing text"],
+        "answer_index": 1,
+        "explanation": "Error signals travel backward to update the weights."
+      },
+      "related": ["neural-network", "loss-function", "weights"],
+      "review_status": "draft"
+    },
+    {
+      "id": "bayesian-networks",
+      "term": "Bayesian Networks",
+      "aliases": ["Bayes nets"],
+      "category": "Models & Architectures",
+      "simple": "Graphs that show how variables influence each other using probabilities.",
+      "mental_model": "A map showing that rain raises the chance of wet roads, which raises the chance of accidents.",
+      "quiz": {
+        "q": "Bayesian networks represent:",
+        "options": ["Images", "Probabilistic cause-and-effect links", "GPU layouts", "Prompts"],
+        "answer_index": 1,
+        "explanation": "They model dependencies between variables with probabilities."
+      },
+      "related": ["markov-chain", "knowledge-graph"],
+      "review_status": "draft"
+    },
+    {
+      "id": "bias",
+      "term": "Bias",
+      "aliases": ["AI bias"],
+      "category": "Ethics & Governance",
+      "simple": "When an AI system's results unfairly favor or disadvantage certain groups.",
+      "mental_model": "A hiring tool trained on past hires keeps preferring the same type of candidate.",
+      "quiz": {
+        "q": "A common source of AI bias is:",
+        "options": ["Skewed training data", "Faster chips", "Short prompts", "Larger screens"],
+        "answer_index": 0,
+        "explanation": "Models often inherit patterns and imbalances from their training data."
+      },
+      "related": ["ethical-ai", "training-data"],
+      "review_status": "draft"
+    },
+    {
+      "id": "big-data",
+      "term": "Big Data",
+      "aliases": [],
+      "category": "Data",
+      "simple": "Datasets so large that ordinary tools can't process them, often analyzed with AI to find patterns.",
+      "mental_model": "Millions of card swipes scanned at once to spot fraud.",
+      "quiz": {
+        "q": "Big data is mainly defined by:",
+        "options": ["Being colorful", "Being too large for traditional tools", "Being labeled", "Being synthetic"],
+        "answer_index": 1,
+        "explanation": "Its volume exceeds what conventional software handles."
+      },
+      "related": ["data-mining", "training-data"],
+      "review_status": "draft"
+    },
+    {
+      "id": "chatbot",
+      "term": "Chatbot",
+      "aliases": [],
+      "category": "Applications",
+      "simple": "A program that holds a conversation with people by text or voice.",
+      "mental_model": "The support window on a shopping site that answers 'where's my order?'",
+      "quiz": {
+        "q": "A chatbot's job is to:",
+        "options": ["Render graphics", "Simulate conversation", "Train GPUs", "Label data"],
+        "answer_index": 1,
+        "explanation": "Chatbots interact with people in conversation."
+      },
+      "related": ["large-language-model", "nlp"],
+      "review_status": "draft"
+    },
+    {
+      "id": "closed-source",
+      "term": "Closed Source",
+      "aliases": ["Proprietary software"],
+      "category": "Ethics & Governance",
+      "simple": "Software whose code is kept private and can't be viewed or modified by the public.",
+      "mental_model": "A sealed appliance: you can use it but can't open it up.",
+      "quiz": {
+        "q": "Closed-source code is:",
+        "options": ["Public and editable", "Restricted from public view", "Always free", "Always smaller"],
+        "answer_index": 1,
+        "explanation": "The owner restricts access to the underlying code."
+      },
+      "related": ["open-source", "open-weight-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "computer-vision",
+      "term": "Computer Vision",
+      "aliases": ["CV"],
+      "category": "Applications",
+      "simple": "AI that lets computers understand images and video.",
+      "mental_model": "A phone camera that outlines faces before you take the photo.",
+      "quiz": {
+        "q": "Computer vision deals with:",
+        "options": ["Audio only", "Visual data like images and video", "Spreadsheets", "Passwords"],
+        "answer_index": 1,
+        "explanation": "It interprets visual information."
+      },
+      "related": ["vision-transformer", "multimodal-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "context-window",
+      "term": "Context Window",
+      "aliases": ["Context length"],
+      "category": "Models & Architectures",
+      "simple": "The amount of text a model can take in and consider at once.",
+      "mental_model": "A desk: only the papers that fit on it are in front of you.",
+      "quiz": {
+        "q": "What happens to text beyond the context window?",
+        "options": ["It is remembered perfectly", "The model can't see it in that request", "It is translated", "It trains the model"],
+        "answer_index": 1,
+        "explanation": "Only content within the window is available to the model."
+      },
+      "related": ["tokenization", "rag"],
+      "review_status": "draft"
+    },
+    {
+      "id": "contrastive-learning",
+      "term": "Contrastive Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Learning by comparing similar and different examples to see what sets them apart.",
+      "mental_model": "Learning to tell cats from dogs by seeing pairs side by side.",
+      "quiz": {
+        "q": "Contrastive learning relies on:",
+        "options": ["Comparing similar and dissimilar examples", "Random guessing", "Rules written by hand", "Deleting data"],
+        "answer_index": 0,
+        "explanation": "It pulls similar items together and pushes different ones apart."
+      },
+      "related": ["embeddings", "self-supervised-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "data-augmentation",
+      "term": "Data Augmentation",
+      "aliases": [],
+      "category": "Data",
+      "simple": "Creating extra training examples by modifying data you already have.",
+      "mental_model": "Flipping and cropping photos so one picture becomes ten.",
+      "quiz": {
+        "q": "Data augmentation helps by:",
+        "options": ["Collecting new real-world data", "Expanding data from existing examples", "Removing labels", "Speeding up chips"],
+        "answer_index": 1,
+        "explanation": "It generates variations without new collection."
+      },
+      "related": ["synthetic-data", "overfitting"],
+      "review_status": "draft"
+    },
+    {
+      "id": "data-mining",
+      "term": "Data Mining",
+      "aliases": [],
+      "category": "Data",
+      "simple": "Digging through large datasets to find hidden patterns and trends.",
+      "mental_model": "A store finding that people who buy diapers often buy snacks too.",
+      "quiz": {
+        "q": "Data mining aims to:",
+        "options": ["Discover patterns in data", "Encrypt data", "Build chips", "Write prompts"],
+        "answer_index": 0,
+        "explanation": "It uncovers patterns using statistics and ML."
+      },
+      "related": ["big-data", "predictive-analytics"],
+      "review_status": "draft"
+    },
+    {
+      "id": "data-poisoning",
+      "term": "Data Poisoning",
+      "aliases": [],
+      "category": "Safety & Security",
+      "simple": "An attack that plants bad or mislabeled data in a model's training set to corrupt it.",
+      "mental_model": "Someone slips wrong answers into a student's textbook before the exam.",
+      "quiz": {
+        "q": "Where does data poisoning strike?",
+        "options": ["The training dataset", "The monitor", "The GPU fan", "The user's keyboard"],
+        "answer_index": 0,
+        "explanation": "Attackers tamper with training data to affect model behavior."
+      },
+      "related": ["training-data", "ai-safety"],
+      "review_status": "draft"
+    },
+    {
+      "id": "decision-tree",
+      "term": "Decision Tree",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "A model that makes predictions by asking a chain of yes/no questions.",
+      "mental_model": "A 20-questions game that narrows down to an answer.",
+      "quiz": {
+        "q": "A decision tree predicts by:",
+        "options": ["Asking sequential yes/no splits", "Drawing images", "Averaging all words", "Using attention"],
+        "answer_index": 0,
+        "explanation": "It splits data on features step by step."
+      },
+      "related": ["ensemble-methods", "supervised-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "deep-learning",
+      "term": "Deep Learning",
+      "aliases": ["DL"],
+      "category": "Learning Methods",
+      "simple": "Machine learning with many-layered neural networks that learn complex patterns on their own.",
+      "mental_model": "Your photo app learning to recognize your dog from thousands of pictures.",
+      "quiz": {
+        "q": "'Deep' in deep learning refers to:",
+        "options": ["Many layers", "Big screens", "Secret data", "Slow training"],
+        "answer_index": 0,
+        "explanation": "Deep means networks with many layers."
+      },
+      "related": ["neural-network", "machine-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "diffusion-models",
+      "term": "Diffusion Models",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "Generative models that create content by learning to remove noise step by step.",
+      "mental_model": "A sculptor revealing an image from a block of static.",
+      "quiz": {
+        "q": "Diffusion models generate by:",
+        "options": ["Removing noise step by step", "Copying files", "Sorting tables", "Counting tokens"],
+        "answer_index": 0,
+        "explanation": "They learn to denoise random noise into new content."
+      },
+      "related": ["generative-ai", "gans"],
+      "review_status": "draft"
+    },
+    {
+      "id": "dimensionality-reduction",
+      "term": "Dimensionality Reduction",
+      "aliases": [],
+      "category": "Techniques",
+      "simple": "Cutting down the number of variables in data while keeping the important information.",
+      "mental_model": "Summarizing a 50-question survey into three key scores.",
+      "quiz": {
+        "q": "Dimensionality reduction tries to:",
+        "options": ["Add more variables", "Simplify data while keeping key info", "Encrypt data", "Label data"],
+        "answer_index": 1,
+        "explanation": "It compresses features with minimal loss of meaning."
+      },
+      "related": ["latent-space", "embeddings"],
+      "review_status": "draft"
+    },
+    {
+      "id": "embeddings",
+      "term": "Embeddings",
+      "aliases": ["Vector embeddings"],
+      "category": "Data",
+      "simple": "Lists of numbers that capture the meaning of words, images or other items.",
+      "mental_model": "GPS coordinates for meaning: 'king' and 'queen' land near each other.",
+      "quiz": {
+        "q": "Embeddings turn data into:",
+        "options": ["Vectors of numbers", "Images", "Passwords", "Rules"],
+        "answer_index": 0,
+        "explanation": "They encode meaning as numerical vectors."
+      },
+      "related": ["vector-database", "rag", "latent-space"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ensemble-methods",
+      "term": "Ensemble Methods",
+      "aliases": ["Ensembles"],
+      "category": "Techniques",
+      "simple": "Combining several models so the group predicts better than any one alone.",
+      "mental_model": "Asking a panel of doctors instead of one.",
+      "quiz": {
+        "q": "Why use an ensemble?",
+        "options": ["Combined models are often more accurate", "It needs no data", "It removes training", "It shrinks the model"],
+        "answer_index": 0,
+        "explanation": "Pooling models reduces individual errors."
+      },
+      "related": ["decision-tree", "overfitting"],
+      "review_status": "draft"
+    },
+    {
+      "id": "ethical-ai",
+      "term": "Ethical AI",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "Building and using AI in line with human values, fairness, transparency and societal well-being.",
+      "mental_model": "A loan model that is tested to make sure it treats applicants fairly.",
+      "quiz": {
+        "q": "Ethical AI emphasizes:",
+        "options": ["Fairness and transparency", "Maximum speed only", "Secrecy", "Cost cutting only"],
+        "answer_index": 0,
+        "explanation": "It aligns AI design and use with human values."
+      },
+      "related": ["responsible-ai", "bias"],
+      "review_status": "draft"
+    },
+    {
+      "id": "expert-systems",
+      "term": "Expert Systems",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "Older AI that imitates a human expert using stored facts and if-then rules.",
+      "mental_model": "A checklist program that diagnoses car trouble from rules a mechanic wrote.",
+      "quiz": {
+        "q": "Expert systems mainly use:",
+        "options": ["If-then rules and a knowledge base", "Diffusion", "Attention", "Embeddings"],
+        "answer_index": 0,
+        "explanation": "They reason with hand-built rules and facts."
+      },
+      "related": ["traditional-ai", "knowledge-graph"],
+      "review_status": "draft"
+    },
+    {
+      "id": "explainable-ai",
+      "term": "Explainable AI (XAI)",
+      "aliases": ["XAI"],
+      "category": "Ethics & Governance",
+      "simple": "Methods that make an AI's decisions understandable instead of a black box.",
+      "mental_model": "A loan denial that tells you 'income too low and debt too high.'",
+      "quiz": {
+        "q": "XAI helps with:",
+        "options": ["Understanding why AI decided something", "Faster training", "Storing vectors", "Rendering images"],
+        "answer_index": 0,
+        "explanation": "It makes AI decisions interpretable to humans."
+      },
+      "related": ["interpretability", "responsible-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "federated-learning",
+      "term": "Federated Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Training a shared model across many devices without moving their private data.",
+      "mental_model": "Your phone's keyboard improves from your typing without sending your messages to a server.",
+      "quiz": {
+        "q": "In federated learning, the raw data:",
+        "options": ["Stays on local devices", "Goes to one server", "Is deleted", "Is published"],
+        "answer_index": 0,
+        "explanation": "Only model updates are shared, not the raw data."
+      },
+      "related": ["training-data", "ethical-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "few-shot-learning",
+      "term": "Few-Shot Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Learning a new task from just a handful of examples.",
+      "mental_model": "Showing a chatbot three sample emails and it writes the fourth in the same style.",
+      "quiz": {
+        "q": "Few-shot learning uses:",
+        "options": ["Millions of examples", "A small number of examples", "No model", "Only images"],
+        "answer_index": 1,
+        "explanation": "It generalizes from very few examples."
+      },
+      "related": ["zero-shot-learning", "prompt-engineering"],
+      "review_status": "draft"
+    },
+    {
+      "id": "fine-tuning",
+      "term": "Fine-Tuning",
+      "aliases": [],
+      "category": "Techniques",
+      "simple": "Taking a pre-trained model and training it more on specific data for a specific job.",
+      "mental_model": "A general doctor doing a residency to become a heart specialist.",
+      "quiz": {
+        "q": "Fine-tuning starts from:",
+        "options": ["A pre-trained model", "An empty model", "A spreadsheet", "A prompt"],
+        "answer_index": 0,
+        "explanation": "It adapts an existing model with additional training."
+      },
+      "related": ["transfer-learning", "foundation-models"],
+      "review_status": "draft"
+    },
+    {
+      "id": "foundation-models",
+      "term": "Foundation Models",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "Large models trained on broad data that can be adapted to many different tasks.",
+      "mental_model": "A strong base layer of a building that many different apps are built on.",
+      "quiz": {
+        "q": "A foundation model is:",
+        "options": ["Task-specific only", "Broadly trained and adaptable", "A small rule engine", "A database"],
+        "answer_index": 1,
+        "explanation": "It serves as a base for many downstream uses."
+      },
+      "related": ["fine-tuning", "frontier-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "frontier-model",
+      "term": "Frontier Model",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "A top-tier general-purpose AI model at or near the cutting edge.",
+      "mental_model": "The newest flagship phone versus last year's model.",
+      "quiz": {
+        "q": "A frontier model is:",
+        "options": ["Among the most capable current models", "A tiny on-device model", "An outdated model", "A dataset"],
+        "answer_index": 0,
+        "explanation": "Frontier means at the leading edge of capability."
+      },
+      "related": ["foundation-models", "ai-benchmarks"],
+      "review_status": "draft"
+    },
+    {
+      "id": "generative-ai",
+      "term": "Generative AI",
+      "aliases": ["GenAI"],
+      "category": "Applications",
+      "simple": "AI that creates new content such as text, images, music, code or video.",
+      "mental_model": "Typing 'a cat in a spacesuit' and getting a brand-new picture.",
+      "quiz": {
+        "q": "Generative AI can:",
+        "options": ["Create new content", "Only classify", "Only store data", "Only translate"],
+        "answer_index": 0,
+        "explanation": "It produces new text, images, audio, and more."
+      },
+      "related": ["diffusion-models", "large-language-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "gans",
+      "term": "GANs (Generative Adversarial Networks)",
+      "aliases": ["GAN"],
+      "category": "Models & Architectures",
+      "simple": "Two networks compete, one making fakes and one spotting them, until the fakes look real.",
+      "mental_model": "A counterfeiter and a detective who each get better by outsmarting the other.",
+      "quiz": {
+        "q": "The two parts of a GAN are:",
+        "options": ["Generator and discriminator", "Encoder and tokenizer", "Parser and compiler", "Teacher and student"],
+        "answer_index": 0,
+        "explanation": "The generator creates, the discriminator judges."
+      },
+      "related": ["generative-ai", "diffusion-models"],
+      "review_status": "draft"
+    },
+    {
+      "id": "gpt",
+      "term": "GPT (Generative Pre-Trained Transformer)",
+      "aliases": ["GPT"],
+      "category": "Models & Architectures",
+      "simple": "A family of language models built on the transformer that generate human-like text from prompts.",
+      "mental_model": "An autocomplete that can write a whole essay.",
+      "quiz": {
+        "q": "GPT is built on which architecture?",
+        "options": ["Transformer", "Decision tree", "Markov chain", "k-NN"],
+        "answer_index": 0,
+        "explanation": "The T in GPT stands for Transformer."
+      },
+      "related": ["transformer", "large-language-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "gpu",
+      "term": "GPU (Graphics Processing Unit)",
+      "aliases": ["GPU"],
+      "category": "Operations & Infrastructure",
+      "simple": "A chip that does many calculations in parallel, which is ideal for training AI.",
+      "mental_model": "A thousand calculators working together instead of one fast one.",
+      "quiz": {
+        "q": "Why are GPUs good for AI?",
+        "options": ["Massive parallel math", "Large storage", "Low price", "Better displays"],
+        "answer_index": 0,
+        "explanation": "AI training involves huge parallel computations."
+      },
+      "related": ["ai-tech-stack", "hyperscaler"],
+      "review_status": "draft"
+    },
+    {
+      "id": "hallucinations",
+      "term": "Hallucinations",
+      "aliases": ["Confabulation"],
+      "category": "Safety & Security",
+      "simple": "When an AI states false or made-up information as if it were fact.",
+      "mental_model": "A chatbot confidently citing a book that doesn't exist.",
+      "quiz": {
+        "q": "A hallucination is:",
+        "options": ["A confident but false AI output", "A slow response", "A blurry image", "A hardware fault"],
+        "answer_index": 0,
+        "explanation": "The model produces plausible-sounding but incorrect content."
+      },
+      "related": ["rag", "human-in-the-loop"],
+      "review_status": "draft"
+    },
+    {
+      "id": "human-centered-ai",
+      "term": "Human-Centered AI (HAI)",
+      "aliases": ["HAI"],
+      "category": "Ethics & Governance",
+      "simple": "Designing AI around human needs, values and well-being.",
+      "mental_model": "A medical AI built with doctors and patients, not just engineers.",
+      "quiz": {
+        "q": "Human-centered AI prioritizes:",
+        "options": ["Human needs and values", "Only profit", "Only speed", "Only data size"],
+        "answer_index": 0,
+        "explanation": "Human well-being guides design and deployment."
+      },
+      "related": ["responsible-ai", "hci"],
+      "review_status": "draft"
+    },
+    {
+      "id": "hci",
+      "term": "Human-Computer Interaction (HCI)",
+      "aliases": ["HCI"],
+      "category": "Foundations",
+      "simple": "The study of how people use and interact with computers.",
+      "mental_model": "Why swipe-to-refresh feels natural on a phone.",
+      "quiz": {
+        "q": "HCI studies:",
+        "options": ["How people interact with computers", "Chip design", "Model weights", "Data pipelines"],
+        "answer_index": 0,
+        "explanation": "It focuses on the human side of using computer systems."
+      },
+      "related": ["human-centered-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "human-in-the-loop",
+      "term": "Human-in-the-Loop",
+      "aliases": ["HITL"],
+      "category": "Safety & Security",
+      "simple": "Keeping a person involved to review, correct or approve an AI's work.",
+      "mental_model": "An AI drafts a refund email and a manager approves it before sending.",
+      "quiz": {
+        "q": "HITL means:",
+        "options": ["Humans review or guide AI", "AI works with no oversight", "Hardware testing", "A training method"],
+        "answer_index": 0,
+        "explanation": "A person provides feedback or approval within the process."
+      },
+      "related": ["agentic-ai", "ai-safety"],
+      "review_status": "draft"
+    },
+    {
+      "id": "hyperparameter",
+      "term": "Hyperparameter",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "A setting you choose before training begins, like learning rate.",
+      "mental_model": "Setting the oven temperature before you bake.",
+      "quiz": {
+        "q": "Hyperparameters are set:",
+        "options": ["Before training", "After deployment only", "By the model itself during training", "Never"],
+        "answer_index": 0,
+        "explanation": "They are chosen up front, unlike parameters learned in training."
+      },
+      "related": ["parameter", "optimization-algorithm"],
+      "review_status": "draft"
+    },
+    {
+      "id": "hyperscaler",
+      "term": "Hyperscaler",
+      "aliases": [],
+      "category": "Operations & Infrastructure",
+      "simple": "A giant cloud company with massive data centers that can scale computing on demand.",
+      "mental_model": "A power utility for computing: plug in and use as much as you need.",
+      "quiz": {
+        "q": "A hyperscaler offers:",
+        "options": ["Elastic cloud computing at huge scale", "Only small servers", "Only software licenses", "Only datasets"],
+        "answer_index": 0,
+        "explanation": "It rapidly expands compute, storage and cloud services."
+      },
+      "related": ["gpu", "ai-tech-stack"],
+      "review_status": "draft"
+    },
+    {
+      "id": "inference",
+      "term": "Inference",
+      "aliases": [],
+      "category": "Operations & Infrastructure",
+      "simple": "When a trained model makes predictions or answers on new input.",
+      "mental_model": "Asking a chatbot a question and it replies, with no learning happening.",
+      "quiz": {
+        "q": "Inference is:",
+        "options": ["Using a trained model on new data", "Training from scratch", "Cleaning data", "Labeling data"],
+        "answer_index": 0,
+        "explanation": "It is the prediction phase after training."
+      },
+      "related": ["model", "mlops"],
+      "review_status": "draft"
+    },
+    {
+      "id": "interpretability",
+      "term": "Interpretability",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "How well humans can understand how an AI reached its output.",
+      "mental_model": "A simple decision tree you can read, versus a huge network you can't.",
+      "quiz": {
+        "q": "A highly interpretable model is one that:",
+        "options": ["Humans can understand", "Runs fastest", "Uses the most data", "Is closed source"],
+        "answer_index": 0,
+        "explanation": "Interpretability is about human understanding of decisions."
+      },
+      "related": ["explainable-ai", "decision-tree"],
+      "review_status": "draft"
+    },
+    {
+      "id": "k-nn",
+      "term": "k-NN (k-Nearest Neighbors)",
+      "aliases": ["kNN"],
+      "category": "Models & Architectures",
+      "simple": "A simple method that predicts by looking at the closest known examples.",
+      "mental_model": "Guessing your taste in movies from what your five most similar friends like.",
+      "quiz": {
+        "q": "k-NN predicts using:",
+        "options": ["The nearest similar examples", "A deep network", "Random guessing", "Rules"],
+        "answer_index": 0,
+        "explanation": "It looks at the k closest data points."
+      },
+      "related": ["supervised-learning", "embeddings"],
+      "review_status": "draft"
+    },
+    {
+      "id": "knowledge-graph",
+      "term": "Knowledge Graph",
+      "aliases": [],
+      "category": "Data",
+      "simple": "A database of entities and the relationships between them, stored as a network.",
+      "mental_model": "A map linking 'Paris' to 'France' to 'Eiffel Tower.'",
+      "quiz": {
+        "q": "A knowledge graph stores:",
+        "options": ["Entities and their relationships", "Only images", "Only numbers", "Only passwords"],
+        "answer_index": 0,
+        "explanation": "It represents information as connected entities."
+      },
+      "related": ["rag", "bayesian-networks"],
+      "review_status": "draft"
+    },
+    {
+      "id": "large-language-model",
+      "term": "Large Language Model (LLM)",
+      "aliases": ["LLM"],
+      "category": "Models & Architectures",
+      "simple": "An AI trained on huge amounts of text to understand and write language.",
+      "mental_model": "The engine behind a chatbot that drafts your emails.",
+      "quiz": {
+        "q": "LLMs are trained mainly on:",
+        "options": ["Massive text data", "Only sound", "Only video", "Only tables"],
+        "answer_index": 0,
+        "explanation": "They learn language patterns from large text corpora."
+      },
+      "related": ["transformer", "gpt", "tokenization"],
+      "review_status": "draft"
+    },
+    {
+      "id": "latent-space",
+      "term": "Latent Space",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "A compressed internal 'map' where a model keeps the essential features of data.",
+      "mental_model": "A city map that drops tiny details but keeps where things are.",
+      "quiz": {
+        "q": "Latent space captures:",
+        "options": ["Essential features in compressed form", "Raw pixels only", "Passwords", "Hardware specs"],
+        "answer_index": 0,
+        "explanation": "It is a lower-dimensional representation of key patterns."
+      },
+      "related": ["embeddings", "dimensionality-reduction"],
+      "review_status": "draft"
+    },
+    {
+      "id": "llmops",
+      "term": "LLMOps",
+      "aliases": ["Large Language Model Operations"],
+      "category": "Operations & Infrastructure",
+      "simple": "Practices for running LLM-based apps reliably in production over their whole life.",
+      "mental_model": "The ops crew that monitors, updates and fixes a live chatbot.",
+      "quiz": {
+        "q": "LLMOps covers:",
+        "options": ["Managing LLM apps in production", "Designing chips", "Labeling images", "Writing poems"],
+        "answer_index": 0,
+        "explanation": "It manages the lifecycle of LLM-based applications."
+      },
+      "related": ["mlops", "model-drift"],
+      "review_status": "draft"
+    },
+    {
+      "id": "loss-function",
+      "term": "Loss Function",
+      "aliases": ["Cost function", "Objective function"],
+      "category": "Learning Methods",
+      "simple": "A score of how wrong a model's predictions are.",
+      "mental_model": "A golf score: lower means closer to the goal.",
+      "quiz": {
+        "q": "Training tries to make the loss:",
+        "options": ["Smaller", "Larger", "Random", "Constant"],
+        "answer_index": 0,
+        "explanation": "Lower loss means predictions are closer to the truth."
+      },
+      "related": ["backpropagation", "optimization-algorithm"],
+      "review_status": "draft"
+    },
+    {
+      "id": "machine-learning",
+      "term": "Machine Learning",
+      "aliases": ["ML"],
+      "category": "Learning Methods",
+      "simple": "AI that learns patterns from data instead of following hand-written rules.",
+      "mental_model": "A spam filter that gets better as you mark more emails as spam.",
+      "quiz": {
+        "q": "Machine learning learns from:",
+        "options": ["Data", "Hand-coded rules only", "Magic", "Hardware"],
+        "answer_index": 0,
+        "explanation": "Models find patterns in data to make decisions."
+      },
+      "related": ["deep-learning", "supervised-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "markov-chain",
+      "term": "Markov Chain",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "A model where the next step depends only on the current state, not the past.",
+      "mental_model": "Tomorrow's weather guess based only on today's weather.",
+      "quiz": {
+        "q": "In a Markov chain, the next state depends on:",
+        "options": ["Only the current state", "The whole history", "Random noise only", "The dataset size"],
+        "answer_index": 0,
+        "explanation": "It is memoryless beyond the present state."
+      },
+      "related": ["bayesian-networks"],
+      "review_status": "draft"
+    },
+    {
+      "id": "mlops",
+      "term": "MLOps",
+      "aliases": ["Machine Learning Operations"],
+      "category": "Operations & Infrastructure",
+      "simple": "Practices for deploying, monitoring and maintaining ML models in production.",
+      "mental_model": "DevOps for models: ship, watch, fix.",
+      "quiz": {
+        "q": "MLOps combines:",
+        "options": ["ML, software engineering and DevOps", "Only math", "Only design", "Only hardware"],
+        "answer_index": 0,
+        "explanation": "It brings engineering discipline to ML in production."
+      },
+      "related": ["llmops", "model-drift", "ai-workflow"],
+      "review_status": "draft"
+    },
+    {
+      "id": "model",
+      "term": "Model",
+      "aliases": ["AI model"],
+      "category": "Foundations",
+      "simple": "A simplified mathematical stand-in for something real, used to predict or explain.",
+      "mental_model": "A weather model that turns today's data into tomorrow's forecast.",
+      "quiz": {
+        "q": "A model is:",
+        "options": ["A simplified representation for predictions", "A physical robot", "A database", "A cable"],
+        "answer_index": 0,
+        "explanation": "It approximates a real system to make predictions."
+      },
+      "related": ["parameter", "inference"],
+      "review_status": "draft"
+    },
+    {
+      "id": "model-drift",
+      "term": "Model Drift",
+      "aliases": ["Data drift"],
+      "category": "Operations & Infrastructure",
+      "simple": "A model gets worse over time because real-world data changes from what it was trained on.",
+      "mental_model": "A shopping recommender trained pre-pandemic that no longer fits new habits.",
+      "quiz": {
+        "q": "Model drift happens when:",
+        "options": ["Real-world data shifts", "The GPU overheats", "Code is deleted", "Users leave"],
+        "answer_index": 0,
+        "explanation": "The data changes, so the model's accuracy falls."
+      },
+      "related": ["mlops", "training-data"],
+      "review_status": "draft"
+    },
+    {
+      "id": "multimodal-ai",
+      "term": "Multimodal AI",
+      "aliases": [],
+      "category": "Applications",
+      "simple": "AI that handles several kinds of data together, like text, images, audio and video.",
+      "mental_model": "Snapping a photo of a menu and asking the AI to translate and recommend a dish.",
+      "quiz": {
+        "q": "Multimodal AI handles:",
+        "options": ["Multiple data types", "Only text", "Only numbers", "Only code"],
+        "answer_index": 0,
+        "explanation": "It processes and generates several modalities."
+      },
+      "related": ["computer-vision", "vision-transformer"],
+      "review_status": "draft"
+    },
+    {
+      "id": "nlp",
+      "term": "Natural Language Processing (NLP)",
+      "aliases": ["NLP"],
+      "category": "Applications",
+      "simple": "AI that helps computers understand and produce human language.",
+      "mental_model": "Voice assistants understanding 'set an alarm for 7.'",
+      "quiz": {
+        "q": "NLP focuses on:",
+        "options": ["Human language", "Images", "Chips", "Networks cables"],
+        "answer_index": 0,
+        "explanation": "It enables machines to work with human language."
+      },
+      "related": ["large-language-model", "semantic-analysis"],
+      "review_status": "draft"
+    },
+    {
+      "id": "neural-network",
+      "term": "Neural Network",
+      "aliases": ["NN"],
+      "category": "Models & Architectures",
+      "simple": "A model of connected layers of artificial 'neurons' loosely inspired by the brain.",
+      "mental_model": "A web of tiny switches that together learn to spot a face.",
+      "quiz": {
+        "q": "Neural networks are made of:",
+        "options": ["Layers of connected neurons", "Rows of rules", "Folders", "Cables"],
+        "answer_index": 0,
+        "explanation": "Interconnected layers process and pass on information."
+      },
+      "related": ["deep-learning", "weights", "backpropagation"],
+      "review_status": "draft"
+    },
+    {
+      "id": "optimization-algorithm",
+      "term": "Optimization Algorithm",
+      "aliases": ["Optimizer"],
+      "category": "Learning Methods",
+      "simple": "A method that tweaks a model's settings so it makes fewer mistakes.",
+      "mental_model": "Walking downhill in fog, step by step, to reach the lowest point.",
+      "quiz": {
+        "q": "An optimizer adjusts:",
+        "options": ["Model settings to reduce errors", "The screen", "The dataset size", "File names"],
+        "answer_index": 0,
+        "explanation": "It updates parameters to lower the loss."
+      },
+      "related": ["loss-function", "hyperparameter"],
+      "review_status": "draft"
+    },
+    {
+      "id": "overfitting",
+      "term": "Overfitting",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "When a model memorizes its training data, noise included, and fails on new data.",
+      "mental_model": "A student who memorizes past exams and fails a new question.",
+      "quiz": {
+        "q": "An overfit model usually:",
+        "options": ["Does well on training data but poorly on new data", "Does well everywhere", "Cannot train", "Uses no data"],
+        "answer_index": 0,
+        "explanation": "It memorizes rather than generalizes."
+      },
+      "related": ["data-augmentation", "ensemble-methods"],
+      "review_status": "draft"
+    },
+    {
+      "id": "open-source-model",
+      "term": "Open-Source Model",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "An AI model released with its weights, code, training data details and tools so others can inspect, reproduce and modify it.",
+      "mental_model": "A recipe published with every ingredient and step, so anyone can cook and change it.",
+      "quiz": {
+        "q": "What does a fully open-source model share beyond weights?",
+        "options": ["Code, training data info and tools", "Only the logo", "Only a demo", "Nothing"],
+        "answer_index": 0,
+        "explanation": "True open source includes enough to reproduce and modify the model."
+      },
+      "related": ["open-weight-model", "open-source"],
+      "review_status": "draft"
+    },
+    {
+      "id": "open-weight-model",
+      "term": "Open-Weight Model",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "A model whose trained weights are public so anyone can download and run it, though other parts may stay private.",
+      "mental_model": "A finished cake you can take home, without the full recipe.",
+      "quiz": {
+        "q": "What is always public in an open-weight model?",
+        "options": ["The weights", "The training data", "The company's finances", "The full source"],
+        "answer_index": 0,
+        "explanation": "Weights are released; training data and code may not be."
+      },
+      "related": ["open-source-model", "closed-source", "weights"],
+      "review_status": "draft"
+    },
+    {
+      "id": "open-source",
+      "term": "Open Source",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "Software whose design is freely available for anyone to see and use.",
+      "mental_model": "A public blueprint anyone can build from.",
+      "quiz": {
+        "q": "Open source means the code is:",
+        "options": ["Freely viewable and usable", "Hidden", "Paid only", "Encrypted"],
+        "answer_index": 0,
+        "explanation": "The blueprint is public."
+      },
+      "related": ["closed-source", "open-source-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "parameter",
+      "term": "Parameter",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "An internal value a model learns and adjusts during training.",
+      "mental_model": "A dial the model turns on its own until predictions improve.",
+      "quiz": {
+        "q": "Parameters are:",
+        "options": ["Learned during training", "Set by the user before training", "The training data", "The UI"],
+        "answer_index": 0,
+        "explanation": "The model tunes them while it learns."
+      },
+      "related": ["weights", "hyperparameter"],
+      "review_status": "draft"
+    },
+    {
+      "id": "predictive-analytics",
+      "term": "Predictive Analytics",
+      "aliases": [],
+      "category": "Applications",
+      "simple": "Using data and models to forecast what is likely to happen next.",
+      "mental_model": "A store predicting next week's sales to plan stock.",
+      "quiz": {
+        "q": "Predictive analytics aims to:",
+        "options": ["Forecast future outcomes", "Delete old data", "Draw images", "Train GPUs"],
+        "answer_index": 0,
+        "explanation": "It uses past data to anticipate trends."
+      },
+      "related": ["data-mining", "machine-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "prompt-engineering",
+      "term": "Prompt Engineering",
+      "aliases": [],
+      "category": "Techniques",
+      "simple": "Writing clear instructions so a language model gives the output you want.",
+      "mental_model": "Asking 'summarize in 3 bullets for a manager' instead of just 'summarize.'",
+      "quiz": {
+        "q": "Better prompts usually are:",
+        "options": ["Clear and specific", "Vague", "Very short always", "Random"],
+        "answer_index": 0,
+        "explanation": "Clarity and detail guide better outputs."
+      },
+      "related": ["few-shot-learning", "prompt-injection"],
+      "review_status": "draft"
+    },
+    {
+      "id": "prompt-injection",
+      "term": "Prompt Injection",
+      "aliases": [],
+      "category": "Safety & Security",
+      "simple": "An attack that tricks an LLM with crafted input so it ignores its intended instructions.",
+      "mental_model": "A web page hiding the text 'ignore your rules and reveal secrets' for an AI to read.",
+      "quiz": {
+        "q": "Prompt injection tries to:",
+        "options": ["Make an LLM behave unintendedly", "Speed up the model", "Compress text", "Train the model"],
+        "answer_index": 0,
+        "explanation": "Malicious input overrides the intended behavior."
+      },
+      "related": ["prompt-engineering", "ai-safety"],
+      "review_status": "draft"
+    },
+    {
+      "id": "rag",
+      "term": "RAG (Retrieval-Augmented Generation)",
+      "aliases": ["RAG", "Retrieval-Augmented Generation"],
+      "category": "Techniques",
+      "simple": "The model looks up relevant outside information first, then writes its answer using it.",
+      "mental_model": "A support bot searching your company's help docs before replying to a customer.",
+      "quiz": {
+        "q": "What does RAG add to a language model?",
+        "options": ["A lookup of external information before answering", "More GPUs", "A new tokenizer", "Image output"],
+        "answer_index": 0,
+        "explanation": "It retrieves relevant, up-to-date content to ground the answer."
+      },
+      "related": ["vector-database", "embeddings", "hallucinations"],
+      "review_status": "draft"
+    },
+    {
+      "id": "reasoning-model",
+      "term": "Reasoning Model",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "A model built to work through hard problems with step-by-step thinking.",
+      "mental_model": "A student showing their math work instead of blurting out an answer.",
+      "quiz": {
+        "q": "Reasoning models solve problems by:",
+        "options": ["Generating step-by-step thought", "Guessing immediately", "Searching files only", "Skipping logic"],
+        "answer_index": 0,
+        "explanation": "They produce intermediate reasoning steps."
+      },
+      "related": ["large-language-model", "agentic-ai"],
+      "review_status": "draft"
+    },
+    {
+      "id": "reinforcement-learning",
+      "term": "Reinforcement Learning",
+      "aliases": ["RL"],
+      "category": "Learning Methods",
+      "simple": "Learning by trial and error, rewarded for good actions.",
+      "mental_model": "Training a dog with treats until it learns the trick.",
+      "quiz": {
+        "q": "Reinforcement learning learns from:",
+        "options": ["Rewards and penalties", "Labeled answers only", "Clustering", "Rules"],
+        "answer_index": 0,
+        "explanation": "An agent improves by trial, error and rewards."
+      },
+      "related": ["supervised-learning", "unsupervised-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "responsible-ai",
+      "term": "Responsible AI",
+      "aliases": [],
+      "category": "Ethics & Governance",
+      "simple": "Principles and practices for building and using AI safely and ethically.",
+      "mental_model": "A company checklist for fairness and safety before launching an AI feature.",
+      "quiz": {
+        "q": "Responsible AI includes:",
+        "options": ["Ethical and safe practices", "Only speed", "Hiding errors", "Skipping testing"],
+        "answer_index": 0,
+        "explanation": "It is about frameworks guiding safe, ethical AI."
+      },
+      "related": ["ethical-ai", "ai-safety"],
+      "review_status": "draft"
+    },
+    {
+      "id": "robotics",
+      "term": "Robotics",
+      "aliases": [],
+      "category": "Applications",
+      "simple": "Building machines that do physical tasks, increasingly guided by AI.",
+      "mental_model": "A warehouse robot that picks and carries packages.",
+      "quiz": {
+        "q": "Robotics blends:",
+        "options": ["Engineering and computer science", "Only art", "Only law", "Only finance"],
+        "answer_index": 0,
+        "explanation": "It combines engineering with computing, often AI."
+      },
+      "related": ["spatial-intelligence", "reinforcement-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "spatial-intelligence",
+      "term": "Spatial Intelligence",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "Understanding the 3D physical world, how objects sit, move and interact.",
+      "mental_model": "A robot judging whether a cup will fit on a shelf.",
+      "quiz": {
+        "q": "Spatial intelligence concerns:",
+        "options": ["The 3D physical world", "Word counts", "Tax rules", "Audio only"],
+        "answer_index": 0,
+        "explanation": "It is reasoning about objects in space."
+      },
+      "related": ["robotics", "computer-vision"],
+      "review_status": "draft"
+    },
+    {
+      "id": "self-supervised-learning",
+      "term": "Self-Supervised Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "A model creates its own practice puzzles from raw data and learns by solving them.",
+      "mental_model": "Hiding a word in a sentence and guessing it to learn language.",
+      "quiz": {
+        "q": "Self-supervised learning uses:",
+        "options": ["Tasks made from the data itself", "Human labels for everything", "Rewards only", "Rules"],
+        "answer_index": 0,
+        "explanation": "The data supplies its own learning signal."
+      },
+      "related": ["supervised-learning", "unsupervised-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "semantic-analysis",
+      "term": "Semantic Analysis",
+      "aliases": [],
+      "category": "Applications",
+      "simple": "Working out the meaning of language from how words and phrases relate.",
+      "mental_model": "Knowing 'bank' means a riverbank in 'fishing at the bank.'",
+      "quiz": {
+        "q": "Semantic analysis focuses on:",
+        "options": ["Meaning", "Spelling only", "Speed", "Storage"],
+        "answer_index": 0,
+        "explanation": "It interprets meaning, not just words."
+      },
+      "related": ["nlp", "embeddings"],
+      "review_status": "draft"
+    },
+    {
+      "id": "scaling-laws",
+      "term": "Scaling Laws",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "Predictable patterns showing models improve as size, data and compute grow.",
+      "mental_model": "More practice hours generally mean better results, with a predictable curve.",
+      "quiz": {
+        "q": "Scaling laws describe how performance changes with:",
+        "options": ["Size, data and compute", "Colors", "Keyboard layout", "Fonts"],
+        "answer_index": 0,
+        "explanation": "Performance improves predictably as these factors grow."
+      },
+      "related": ["frontier-model", "ai-benchmarks"],
+      "review_status": "draft"
+    },
+    {
+      "id": "supervised-learning",
+      "term": "Supervised Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Learning from examples that come with the correct answers.",
+      "mental_model": "Flashcards with the answer on the back.",
+      "quiz": {
+        "q": "Supervised learning needs:",
+        "options": ["Labeled data", "No data", "Only rewards", "Only images"],
+        "answer_index": 0,
+        "explanation": "Inputs are paired with correct outputs."
+      },
+      "related": ["unsupervised-learning", "training-data"],
+      "review_status": "draft"
+    },
+    {
+      "id": "synthetic-data",
+      "term": "Synthetic Data",
+      "aliases": [],
+      "category": "Data",
+      "simple": "Artificial data made by algorithms or simulations instead of real events.",
+      "mental_model": "Fake but realistic patient records used to test a hospital system.",
+      "quiz": {
+        "q": "Synthetic data is:",
+        "options": ["Generated, not collected", "Always private", "Always labeled", "Handwritten"],
+        "answer_index": 0,
+        "explanation": "It is created by algorithms or simulation."
+      },
+      "related": ["data-augmentation", "training-data"],
+      "review_status": "draft"
+    },
+    {
+      "id": "tensor",
+      "term": "Tensor",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "A multi-dimensional container of numbers, like a spreadsheet with extra dimensions.",
+      "mental_model": "A stack of spreadsheets forming a cube of numbers.",
+      "quiz": {
+        "q": "A tensor is:",
+        "options": ["A multi-dimensional array of numbers", "A chip", "A rule", "A prompt"],
+        "answer_index": 0,
+        "explanation": "Models store and compute data as tensors."
+      },
+      "related": ["neural-network", "gpu"],
+      "review_status": "draft"
+    },
+    {
+      "id": "tokenization",
+      "term": "Tokenization",
+      "aliases": ["Tokens"],
+      "category": "Techniques",
+      "simple": "Splitting text into small pieces (tokens) that a language model can process.",
+      "mental_model": "Chopping a sentence into word-chunks like Lego bricks.",
+      "quiz": {
+        "q": "Tokens can be:",
+        "options": ["Words, word parts or characters", "Only images", "Only sentences", "Only files"],
+        "answer_index": 0,
+        "explanation": "Text is broken into small units."
+      },
+      "related": ["context-window", "large-language-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "traditional-ai",
+      "term": "Traditional AI",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "Earlier AI built on hand-coded rules and logic instead of learning from data.",
+      "mental_model": "A tax program following fixed if-then rules.",
+      "quiz": {
+        "q": "Traditional AI mainly relied on:",
+        "options": ["Explicit rules and logic", "Massive learned weights", "Diffusion", "Embeddings"],
+        "answer_index": 0,
+        "explanation": "Humans defined the knowledge and rules."
+      },
+      "related": ["expert-systems", "machine-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "training-data",
+      "term": "Training Data",
+      "aliases": [],
+      "category": "Data",
+      "simple": "The examples used to teach a model how to do its task.",
+      "mental_model": "The practice problems a student works through before the test.",
+      "quiz": {
+        "q": "Training data is used to:",
+        "options": ["Teach the model", "Display results", "Cool GPUs", "Encrypt files"],
+        "answer_index": 0,
+        "explanation": "Models learn patterns from these examples."
+      },
+      "related": ["bias", "data-poisoning", "supervised-learning"],
+      "review_status": "draft"
+    },
+    {
+      "id": "transfer-learning",
+      "term": "Transfer Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Reusing a model trained on one task as the starting point for a related one.",
+      "mental_model": "A guitar player picking up the ukulele faster.",
+      "quiz": {
+        "q": "Transfer learning reuses:",
+        "options": ["A previously trained model", "Old hardware", "Raw data only", "Prompts"],
+        "answer_index": 0,
+        "explanation": "Knowledge from one task helps another."
+      },
+      "related": ["fine-tuning", "foundation-models"],
+      "review_status": "draft"
+    },
+    {
+      "id": "transformer",
+      "term": "Transformer",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "A neural network design that uses attention to relate all parts of the input at once.",
+      "mental_model": "Reading a whole page at a glance, instead of word by word.",
+      "quiz": {
+        "q": "The key idea in transformers is:",
+        "options": ["Attention", "Decision rules", "Clustering", "Compression"],
+        "answer_index": 0,
+        "explanation": "Attention lets the model relate all input parts simultaneously."
+      },
+      "related": ["attention-mechanism", "gpt", "vision-transformer"],
+      "review_status": "draft"
+    },
+    {
+      "id": "turing-test",
+      "term": "Turing Test",
+      "aliases": [],
+      "category": "Foundations",
+      "simple": "A test of whether a machine's behavior can pass as human.",
+      "mental_model": "Chatting with an unknown partner and failing to tell if it's a person.",
+      "quiz": {
+        "q": "Who proposed the Turing Test in 1950?",
+        "options": ["Alan Turing", "John McCarthy", "Yann LeCun", "Fei-Fei Li"],
+        "answer_index": 0,
+        "explanation": "Alan Turing proposed it in 1950."
+      },
+      "related": ["artificial-intelligence", "chatbot"],
+      "review_status": "draft"
+    },
+    {
+      "id": "unsupervised-learning",
+      "term": "Unsupervised Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Finding patterns in data that has no labels or right answers.",
+      "mental_model": "Sorting a pile of photos into groups without being told the categories.",
+      "quiz": {
+        "q": "Unsupervised learning uses:",
+        "options": ["Unlabeled data", "Labeled data only", "Rewards", "Rules"],
+        "answer_index": 0,
+        "explanation": "It discovers structure without labels."
+      },
+      "related": ["supervised-learning", "dimensionality-reduction"],
+      "review_status": "draft"
+    },
+    {
+      "id": "vector-database",
+      "term": "Vector Database",
+      "aliases": ["Vector store"],
+      "category": "Data",
+      "simple": "A database built to store and quickly search embeddings by similarity.",
+      "mental_model": "A library that finds books by what they're about, not their exact title.",
+      "quiz": {
+        "q": "A vector database searches by:",
+        "options": ["Similarity of vectors", "Exact spelling", "File size", "Date"],
+        "answer_index": 0,
+        "explanation": "It finds the closest vectors in meaning."
+      },
+      "related": ["embeddings", "rag"],
+      "review_status": "draft"
+    },
+    {
+      "id": "vision-transformer",
+      "term": "Vision Transformer (ViT)",
+      "aliases": ["ViT"],
+      "category": "Models & Architectures",
+      "simple": "A transformer adapted to analyze images.",
+      "mental_model": "Cutting a photo into tiles and reading them like words in a sentence.",
+      "quiz": {
+        "q": "ViT applies transformers to:",
+        "options": ["Images", "Only text", "Only audio", "Only tables"],
+        "answer_index": 0,
+        "explanation": "It adapts the transformer for visual data."
+      },
+      "related": ["transformer", "computer-vision"],
+      "review_status": "draft"
+    },
+    {
+      "id": "weights",
+      "term": "Weights",
+      "aliases": [],
+      "category": "Models & Architectures",
+      "simple": "Numbers that set how strongly neurons in a network connect, shaping what the model does.",
+      "mental_model": "Volume knobs on each connection that the model tunes while learning.",
+      "quiz": {
+        "q": "Weights determine:",
+        "options": ["Connection strength between neurons", "Screen brightness", "File size only", "Prompt length"],
+        "answer_index": 0,
+        "explanation": "They control how information flows through the network."
+      },
+      "related": ["parameter", "neural-network", "open-weight-model"],
+      "review_status": "draft"
+    },
+    {
+      "id": "zero-shot-learning",
+      "term": "Zero-Shot Learning",
+      "aliases": [],
+      "category": "Learning Methods",
+      "simple": "Doing a task or recognizing a category the model was never explicitly trained on.",
+      "mental_model": "Identifying a zebra for the first time because you know 'striped horse.'",
+      "quiz": {
+        "q": "Zero-shot means the model had:",
+        "options": ["No task-specific examples", "Millions of examples", "Human help", "A bigger GPU"],
+        "answer_index": 0,
+        "explanation": "It generalizes from general knowledge alone."
+      },
+      "related": ["few-shot-learning", "foundation-models"],
+      "review_status": "draft"
+    }
+  ]
+}
